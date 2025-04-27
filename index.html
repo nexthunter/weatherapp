@@ -9,16 +9,17 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="style.css">
 
-
-    <!-- Font awsome link -->
+    <!-- Font Awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
 
-
-    <!-- Google fonts link -->
+    <!-- Google Fonts link -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <title>Weather App</title>
 </head>
@@ -27,7 +28,7 @@
 
     <div class="container">
         <div class="input">
-            <input type="text " class="inputValue" placeholder="Enter Location">
+            <input type="text" class="inputValue" placeholder="Enter Location">
             <button class="button"><i class="fas fa-search"></i></button>
         </div>
 
@@ -36,9 +37,14 @@
             <p class="desc">---</p>
         </div>
 
+        <!-- Map container -->
+        <div id="map" style="height: 400px; margin-top: 20px;"></div>
     </div>
 
-    <!-- Link to Javascript -->
+    <!-- Leaflet.js Script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Link to JavaScript -->
     <script src="script.js"></script>
 </body>
 
