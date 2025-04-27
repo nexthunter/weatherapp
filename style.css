@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1550507894-975103845538?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 14px;
+    background: #000000d0;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input section */
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input > input {
+    width: 70%;
+    padding: 0.3rem;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    color: white;
+    background: #7c7c7c2b;
+    font-family: 'Raleway', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.input > input:focus {
+    border: 1px solid #007bff;
+}
+
+button.button {
+    width: 29px;
+    padding: 6px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+button.button:focus {
+    outline: none;
+}
+
+button.button:hover {
+    border: 1px solid rgb(122, 112, 112);
+}
+
+/* Weather display section */
+.displayWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.temp {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 20px;
+    color: #ccc;
+}
+
+/* Map container */
+#map {
+    height: 400px;
+    width: 100%; /* Added width for proper layout */
+    border-radius: 10px;
+    background-color: #e0e0e0; /* Added background color for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .input > input {
+        width: 60%;
+    }
+
+    button.button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .temp {
+        font-size: 36px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 1em;
+        max-width: 100%;
+    }
+
+    .input > input {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    button.button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .temp {
+        font-size: 28px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
