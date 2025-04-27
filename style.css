@@ -1,62 +1,100 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* General styles */
+body {
+    font-family: 'Raleway', sans-serif;
     margin: 0;
-    background-image: url('https://images.unsplash.com/photo-1550507894-975103845538?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
+/* Container styling */
 .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input section */
+.input {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 420px;
-    margin: 1em;
-    padding: 2em;
-    border-radius: 14px;
-    background: rgb(234 234 234);
-    background: #000000d0;
-    color: white;
+    margin-bottom: 20px;
 }
 
-.input > input {
-    border: none;
+.inputValue {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     outline: none;
-    padding: 0.3rem;
-    border-radius: 18px;
-    color: rgb(255 255 255);
-    background: #7c7c7c2b;
-    font-family: 'Raleway', sans-serif;
+    transition: border-color 0.3s;
 }
 
-button.button {
+.inputValue:focus {
+    border-color: #007bff;
+}
+
+.button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    width: 29px;
-    padding: 6px;
-    border-radius: 20px;
-    background: #7c7c7c2b;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    transition: (.5s);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-button.button:focus{
-    outline:none;
+.button:hover {
+    background-color: #0056b3;
 }
 
-button.button:hover{
-    border: 1px solid rgb(122, 112, 112) 
+/* Weather display section */
+.displayWeather {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.displayWeather{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
+.temp {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Map container */
+#map {
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .inputValue {
+        width: 60%;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .temp {
+        font-size: 36px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
 }
